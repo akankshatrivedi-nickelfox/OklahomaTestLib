@@ -16,7 +16,7 @@ public class NewViewController: UIViewController {
     @IBOutlet weak var tryThisButton: UIButton!
     
     public init() {
-        super.init(nibName: "NewViewControllerDelegate", bundle: nil)
+        super.init(nibName: "NewViewController", bundle: nil)
     }
     
     required init?(coder: NSCoder) {
