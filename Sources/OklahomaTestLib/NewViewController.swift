@@ -7,16 +7,24 @@
 
 import UIKit
 
-protocol NewViewControllerDelegate {
+public protocol NewViewControllerDelegate {
     func tryThisButtonHit(statement: String)
 }
 
-class NewViewController: UIViewController {
+public class NewViewController: UIViewController {
 
     @IBOutlet weak var tryThisButton: UIButton!
     
-    var delegate: NewViewControllerDelegate?
-    override func viewDidLoad() {
+    public init() {
+        super.init(nibName: "NewViewControllerDelegate", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    public var delegate: NewViewControllerDelegate?
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
