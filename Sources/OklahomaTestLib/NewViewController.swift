@@ -15,7 +15,7 @@ class NewViewController: UIViewController {
 
     @IBOutlet weak var tryThisButton: UIButton!
     
-    weak var delegate: NewViewControllerDelegate?
+    var delegate: NewViewControllerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
 
